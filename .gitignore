@@ -72,3 +72,4 @@ venv/
 # MkDocs documentation
 ## Ignore site directory.
 .site/
+iso/linux/vmware-photon-os/5/amd64/photon-5.0-dde71ec57.x86_64.iso
