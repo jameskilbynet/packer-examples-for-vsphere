@@ -137,7 +137,7 @@
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://releases.ubuntu.com/releases/22.04/ubuntu-22.04.4-live-server-amd64.iso",
+                                        "download_link": "https://releases.ubuntu.com/releases/22.04/ubuntu-22.04.5-live-server-amd64.iso",
                                         "checksum_algorithm": "sha256",
                                         "checksum": "https://releases.ubuntu.com/releases/22.04/SHA256SUMS"
                                     }
