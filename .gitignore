@@ -52,9 +52,16 @@ artifacts/**/*.nvram
 artifacts/**/*.ovf
 artifacts/**/*.vmdk
 
+## Ignore ISO Path
+iso/
+
 # Manifests
 ## Ignore manifests directory.
 manifests/*.json
+
+# JetBrains
+## Ignore idea directory.
+.idea/
 
 # Trunk.io
 ## Ignore trunk directory.

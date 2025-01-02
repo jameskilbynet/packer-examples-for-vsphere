@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 set -e
 
@@ -36,7 +37,7 @@ done
 echo
 echo "> Renaming the example input variables..."
 for file in "${CONFIG_PATH}"/*.pkrvars.hcl.example; do
-    mv -- "${file}" "${file%.example}"
+    mv -i -- "${file}" "${file%.example}"
 done
 
 echo

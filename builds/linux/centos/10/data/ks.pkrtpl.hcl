@@ -1,7 +1,9 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
-# Fedora Server 40
+
+# CentOS Stream 10
 
 ### Installs from the first attached CD-ROM/DVD on the system.
 cdrom
@@ -68,7 +70,9 @@ skipx
 ### Post-installation commands.
 %post
 dnf makecache
-dnf install -y sudo open-vm-tools perl python3-libselinux
+dnf install epel-release -y
+dnf makecache
+dnf install -y sudo open-vm-tools perl
 %{ if additional_packages != "" ~}
 dnf install -y ${additional_packages}
 %{ endif ~}

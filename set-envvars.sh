@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 # This script allows you to set the environment variables on the system for use by Packer instead of using cleartext.
 

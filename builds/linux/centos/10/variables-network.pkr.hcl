@@ -1,9 +1,11 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
+
 
 /*
     DESCRIPTION:
-    Fedora Server 40 network variables.
+    CentOS Stream 10 network variables.
     Packer Plugin for VMware vSphere: 'vsphere-iso' builder.
 */
 

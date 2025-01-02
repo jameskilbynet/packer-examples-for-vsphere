@@ -1,5 +1,6 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 ##############################################################################
 ##
@@ -183,6 +184,15 @@ Oracle-Linux-8:
 
 ##############################################################################
 
+CentOS-Stream-10:
+    extends: .packer-build
+    variables:
+        INPUT_PATH: "$SCRIPT_PATH/builds/linux/centos/10/"
+        BUILD_VARS: "linux-centos-10.pkrvars.hcl"
+        EXTRA_VAR_FILES: "-var-file=$CONFIG_PATH/network.pkrvars.hcl -var-file=$CONFIG_PATH/linux-storage.pkrvars.hcl"
+
+##############################################################################
+
 CentOS-Stream-9:
     extends: .packer-build
     variables:
@@ -192,20 +202,11 @@ CentOS-Stream-9:
 
 ##############################################################################
 
-CentOS-Linux-7:
+Fedora-Server-41:
     extends: .packer-build
     variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/linux/centos/7/"
-        BUILD_VARS: "linux-centos-7.pkrvars.hcl"
-        EXTRA_VAR_FILES: "-var-file=$CONFIG_PATH/network.pkrvars.hcl -var-file=$CONFIG_PATH/linux-storage.pkrvars.hcl"
-
-##############################################################################
-
-Fedora-Server-40:
-    extends: .packer-build
-    variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/linux/fedora/40/"
-        BUILD_VARS: "linux-fedora-40.pkrvars.hcl"
+        INPUT_PATH: "$SCRIPT_PATH/builds/linux/fedora/41/"
+        BUILD_VARS: "linux-fedora-41.pkrvars.hcl"
         EXTRA_VAR_FILES: "-var-file=$CONFIG_PATH/network.pkrvars.hcl -var-file=$CONFIG_PATH/linux-storage.pkrvars.hcl"
 
 ##############################################################################

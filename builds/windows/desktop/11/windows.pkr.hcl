@@ -1,5 +1,6 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 /*
     DESCRIPTION:
@@ -19,11 +20,11 @@ packer {
     }
     git = {
       source  = "github.com/ethanmdavidson/git"
-      version = ">= 0.6.2"
+      version = ">= 0.6.3"
     }
     ansible = {
       source  = "github.com/hashicorp/ansible"
-      version = ">= 1.1.1"
+      version = ">= 1.1.2"
     }
   }
 }

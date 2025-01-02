@@ -1,5 +1,6 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 /*
     DESCRIPTION:
@@ -104,7 +105,7 @@ variable "vm_guest_os_timezone" {
 variable "vm_guest_os_family" {
   type        = string
   description = "The guest operating system family. Used for naming and VMware Tools."
-  default = "linux"
+  default     = "linux"
 }
 
 variable "vm_guest_os_name" {

@@ -1,6 +1,7 @@
 <!--
-Copyright 2023-2024 Broadcom. All rights reserved.
-SPDX-License-Identifier: BSD-2
+© Broadcom. All Rights Reserved.
+The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+SPDX-License-Identifier: BSD-2-Clause
 -->
 
 <!-- markdownlint-disable first-line-h1 no-inline-html -->
@@ -23,36 +24,36 @@ This project supports the following guest operating systems:
 ## Linux Distributions
 
 | Operating System             | Version   |
-| :---                         | :---      |
+|:-----------------------------|:----------|
 | VMware Photon OS             | 5         |
-| VMware Photon OS             | 4         |
+|                              | 4         |
 | Debian                       | 12        |
-| Debian                       | 11        |
+|                              | 11        |
 | Ubuntu Server                | 24.04 LTS |
-| Ubuntu Server                | 22.04 LTS |
-| Ubuntu Server                | 20.04 LTS |
+|                              | 22.04 LTS |
+|                              | 20.04 LTS |
 | Red Hat Enterprise Linux     | 9         |
-| Red Hat Enterprise Linux     | 8         |
+|                              | 8         |
 | AlmaLinux OS                 | 9         |
-| AlmaLinux OS                 | 8         |
+|                              | 8         |
 | Rocky Linux                  | 9         |
-| Rocky Linux                  | 8         |
+|                              | 8         |
 | Oracle Linux                 | 9         |
-| Oracle Linux                 | 8         |
-| CentOS Stream                | 9         |
-| CentOS Stream                | 8         |
-| Fedora Server                | 39        |
+|                              | 8         |
+| CentOS Stream                | 10        |
+|                              | 9         |
+| Fedora Server                | 41        |
 | SUSE Linux Enterprise Server | 15        |
 
 ## Microsoft Windows
 
 | Operating System         | Version | Editions                    | Experience       |
-| :---                     | :---    | :---                        | :---             |
+|:-------------------------| :---    | :---                        | :---             |
 | Microsoft Windows Server | 2025    | Standard and Datacenter     | Core and Desktop |
-| Microsoft Windows Server | 2022    | Standard and Datacenter     | Core and Desktop |
-| Microsoft Windows Server | 2019    | Standard and Datacenter     | Core and Desktop |
+|                          | 2022    | Standard and Datacenter     | Core and Desktop |
+|                          | 2019    | Standard and Datacenter     | Core and Desktop |
 | Microsoft Windows        | 11      | Professional and Enterprise | -                |
-| Microsoft Windows        | 10      | Professional and Enterprise | -                |
+|                          | 10      | Professional and Enterprise | -                |
 
 ## Documentation
 
@@ -83,7 +84,9 @@ You can also start a discussion on the [discussions][gh-discussions] area to ask
 
 ## License
 
-Copyright 2023-2024 Broadcom. All rights reserved.
+© Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+
+Available under the Simplified BSD License.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

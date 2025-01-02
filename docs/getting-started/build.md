@@ -6,6 +6,8 @@ icon: octicons/play-24
 
 ## Using the Build Script
 
+### Interactive Mode
+
 1. Start a build by running the build script (`./build.sh`).
 
       This example will look for the configuration files in the `config` directory.
@@ -70,20 +72,47 @@ icon: octicons/play-24
       vsphere-iso.linux-ubuntu: output will be in this color.
       ```
 
-### Demo
+#### Demo
 
 ![](../assets/images/build.gif)
+
+
+### Command-Line Mode
+
+You can also run the build script using command-line options to specify the operating system, distribution, version, and edition, allowing for non-interactive builds. This is useful for automation or scripting purposes.
+
+#### Examples:
+
+- Build an Ubuntu Server 24.04 LTS image:
+
+```shell
+./build.sh --os "Linux" --dist "Ubuntu Server" --version "24.04 LTS" --auto-continue
+```
+
+???+ note "Info"
+    This will start the build process for Ubuntu Server 24.04 LTS without any user prompts.
+
+- Build a Windows Server 2022 Standard edition image:
+
+```
+./build.sh --os "Windows" --dist "Windows Server" --version "2022" --edition "Standard" --auto-continue
+```
 
 ## Build Script Options
 
 You can use the following options with the script.
 
-| Option   | Short Form | Description                                                     |
-| -------- | ---------- | --------------------------------------------------------------- |
-| `--help` | `-h`, `-H` | Display the help.                                               |
-| `--deps` | `-d`, `-D` | Run a dependency check before running a build.                  |
-| `--json` | `-j`, `-J` | Override the default JSON configuration file.                   |
-| `--show` | `-s`, `-S` | Display the command that the script uses to initialize a build. |
+| Option            | Short Form     | Description                                                     |
+| ----------------- | -------------- | --------------------------------------------------------------- |
+| `--help`          | `-h`, `-H`     | Display the help.                                               |
+| `--deps`          | `-d`, `-D`     | Run a dependency check before running a build.                  |
+| `--json`          | `-j`, `-J`     | Override the default JSON configuration file.                   |
+| `--show`          | `-s`, `-S`     | Display the command that the script uses to initialize a build. |
+| `--os`            |                | Specify the operating system (`Linux` or `Windows`).            |
+| `--dist`          |                | Specify the distribution (e.g., `Ubuntu Server`).               |
+| `--version`       |                | Specify the version of the distribution.                        |
+| `--edition`       |                | Specify the edition if applicable (e.g., `Standard`).           |
+| `--auto-continue` |                | Automatically continue without user prompts.                    |
 
 ## Build Directly with Packer
 

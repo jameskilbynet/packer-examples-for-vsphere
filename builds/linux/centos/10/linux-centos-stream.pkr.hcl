@@ -1,29 +1,30 @@
-# Copyright 2023-2024 Broadcom. All rights reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
+
 
 /*
     DESCRIPTION:
-    Fedora Server 40 build definition.
-    Packer Plugin for VMware vSphere: 'vsphere-iso' builder.
+    CentOS Stream 10 template using the Packer Builder for VMware vSphere (vsphere-iso).
 */
 
 //  BLOCK: packer
 //  The Packer configuration.
 
 packer {
-  required_version = ">= 1.11.0"
+  required_version = ">= 1.11.2"
   required_plugins {
     vsphere = {
       source  = "github.com/hashicorp/vsphere"
-      version = ">= 1.4.0"
+      version = ">= 1.4.2"
     }
     ansible = {
       source  = "github.com/hashicorp/ansible"
-      version = ">= 1.1.1"
+      version = ">= 1.1.2"
     }
     git = {
       source  = "github.com/ethanmdavidson/git"
-      version = ">= 0.6.2"
+      version = ">= 0.6.3"
     }
   }
 }
@@ -83,7 +84,7 @@ locals {
 //  BLOCK: source
 //  Defines the builder configuration blocks.
 
-source "vsphere-iso" "linux-fedora" {
+source "vsphere-iso" "linux-centos-stream" {
 
   // vCenter Server Endpoint Settings and Credentials
   vcenter_server      = var.vsphere_endpoint
@@ -196,7 +197,7 @@ source "vsphere-iso" "linux-fedora" {
 //  Defines the builders to run, provisioners, and post-processors.
 
 build {
-  sources = ["source.vsphere-iso.linux-fedora"]
+  sources = ["source.vsphere-iso.linux-centos-stream"]
 
   provisioner "ansible" {
     user                   = var.build_username
@@ -206,7 +207,7 @@ build {
     roles_path             = "${path.cwd}/ansible/roles"
     ansible_env_vars = [
       "ANSIBLE_CONFIG=${path.cwd}/ansible/ansible.cfg",
-      "ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3"
+      "ANSIBLE_PYTHON_INTERPRETER=/usr/libexec/platform-python"
     ]
     extra_arguments = [
       "--extra-vars", "display_skipped_hosts=false",

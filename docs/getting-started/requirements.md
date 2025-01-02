@@ -31,10 +31,10 @@ The project is tested on the following operating systems for the Packer host [^1
 
 | Component                                                        | Version   | Description      | Resources                                                                                                               |
 | :--------------------------------------------------------------- | :-------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| :simple-packer: &nbsp;&nbsp; Packer                              | >= 1.11.0 |  By HashiCorp    | [:fontawesome-brands-github:][packer-repo] &nbsp;&nbsp; [:material-library:][packer]                                    |
-| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for Ansible        | >= 1.1.1  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-ansible-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-ansible]      |
-| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for VMware vSphere | >= 1.4.0  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-vsphere-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-vsphere-docs] |
-| :fontawesome-brands-git: &nbsp;&nbsp; Packer Plugin for Git      | >= 0.6.2  | Community Plugin | [:fontawesome-brands-github:][packer-plugin-git-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-git-docs]         |
+| :simple-packer: &nbsp;&nbsp; Packer                              | >= 1.11.2 |  By HashiCorp    | [:fontawesome-brands-github:][packer-repo] &nbsp;&nbsp; [:material-library:][packer]                                    |
+| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for Ansible        | >= 1.1.2  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-ansible-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-ansible]      |
+| :simple-hashicorp: &nbsp;&nbsp; Packer Plugin for VMware vSphere | >= 1.4.2  | By HashiCorp     | [:fontawesome-brands-github:][packer-plugin-vsphere-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-vsphere-docs] |
+| :fontawesome-brands-git: &nbsp;&nbsp; Packer Plugin for Git      | >= 0.6.3  | Community Plugin | [:fontawesome-brands-github:][packer-plugin-git-repo] &nbsp;&nbsp; [:material-library:][packer-plugin-git-docs]         |
 
 ### Installation
 
@@ -43,7 +43,7 @@ The project is tested on the following operating systems for the Packer host [^1
     You can install Packer on VMware Photon OS using the following commands:
 
     ```shell
-    export PACKER_VERSION="1.11.0"
+    export PACKER_VERSION="1.11.2"
     export OS_PACKAGES="wget unzip"
 
     tdnf install ${OS_PACKAGES} -y
@@ -101,14 +101,14 @@ executable `/usr/local/bin` or `$HOME/.packer.d/plugins`.
 
 The following additional software packages must be installed on the operating system running Packer.
 
-| Package                                                | Version     | Description                                        | Resources                       |
-| :----------------------------------------------------- | :---------- | :------------------------------------------------- | :------------------------------ |
-| :simple-ansible: &nbsp;&nbsp; ansible-core             | >= 2.16     | Automation engine for IT infrastructure            | [:material-library:][ansible]   |
-| :fontawesome-brands-git: &nbsp;&nbsp; git              | >= 2.45.0   | Version control system for tracking changes        | [:material-library:][git]       |
-| :material-code-braces: &nbsp;&nbsp; gomplate           | >= 3.11.7   | Template renderer                                  | [:material-library:][gomplate]  |
-| :simple-json: &nbsp;&nbsp; jq                          | >= 1.8.3    | Command-line JSON parser                           | [:material-library:][jq]        |
-| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.9.5    | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
-| :fontawesome-solid-compact-disc: &nbsp;&nbsp; xorriso  | >= 1.5.6    | ISO filesystem images creator for Linux            | [:material-library:][xorriso]   |
+| Package                                                | Version   | Description                                        | Resources                       |
+| :----------------------------------------------------- |:----------| :------------------------------------------------- | :------------------------------ |
+| :simple-ansible: &nbsp;&nbsp; ansible-core             | >= 2.16   | Automation engine for IT infrastructure            | [:material-library:][ansible]   |
+| :fontawesome-brands-git: &nbsp;&nbsp; git              | >= 2.43.0 | Version control system for tracking changes        | [:material-library:][git]       |
+| :material-code-braces: &nbsp;&nbsp; gomplate           | >= 4.2.0  | Template renderer                                  | [:material-library:][gomplate]  |
+| :simple-json: &nbsp;&nbsp; jq                          | >= 1.8.3  | Command-line JSON parser                           | [:material-library:][jq]        |
+| :simple-terraform: &nbsp;&nbsp; terraform              | >= 1.10.0 | Infrastructure as Code (IaC) tool by HashiCorp     | [:material-library:][terraform] |
+| :fontawesome-solid-compact-disc: &nbsp;&nbsp; xorriso  | >= 1.5.6  | ISO filesystem images creator for Linux            | [:material-library:][xorriso]   |
 
 ### Installation
 
@@ -126,7 +126,7 @@ The following additional software packages must be installed on the operating sy
     Terraform:
 
     ```shell
-    export TERRAFORM_VERSION="1.9.5"
+    export TERRAFORM_VERSION="1.10.0"
     wget -q https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
     unzip -o -d /usr/local/bin/ terraform_${TERRAFORM_VERSION}_linux_${LINUX_ARCH}.zip
     ```
@@ -134,7 +134,7 @@ The following additional software packages must be installed on the operating sy
     Gomplate
 
     ```shell
-    export GOMPLATE_VERSION="3.11.7"
+    export GOMPLATE_VERSION="4.2.0"
     wget -q https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64
     chmod +x gomplate_linux-amd64
     sudo mv gomplate_linux-amd64 /usr/local/bin/gomplate
@@ -157,7 +157,7 @@ The following additional software packages must be installed on the operating sy
     Gomplate:
 
     ```shell
-    export GOMPLATE_VERSION="3.11.7"
+    export GOMPLATE_VERSION="4.2.0"
     wget -q https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64
     chmod +x gomplate_linux-amd64
     sudo mv gomplate_linux-amd64 /usr/local/bin/gomplate

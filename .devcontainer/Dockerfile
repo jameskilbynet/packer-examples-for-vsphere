@@ -1,5 +1,6 @@
-# Copyright 2023-2024 Broadcom. All Rights Reserved.
-# SPDX-License-Identifier: BSD-2
+# © Broadcom. All Rights Reserved.
+# The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-2-Clause
 
 # Use the base Ubuntu devcontainer image.
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
