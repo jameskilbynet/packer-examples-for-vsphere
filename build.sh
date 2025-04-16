@@ -76,7 +76,7 @@ show_help() {
     local exit_after=${1:-"exit"}
     script_name=$(basename "$0")
 
-    printf "\033[0;32m Usage\033[0m: %s [options]\n\n" "$script_name"
+    printf "\033[0;32m Usage\033[0m: %s [options] [config_path]\n\n" "$script_name"
     printf "\033[0;34m Options:\033[0m\n"
     printf "  \033[0;34m --help, -h, -H\033[0m       Display this help message.\n\n"
     printf "  \033[0;34m --deps, -d, -D\033[0m       Check the dependencies.\n"
@@ -88,6 +88,9 @@ show_help() {
     printf "  \033[0;34m --edition\033[0m            Specify the edition (e.g., 'Standard', 'Datacenter').\n"
     printf "  \033[0;34m --auto-continue\033[0m      Automatically continue without user prompts.\n"
     printf "  \033[0;34m --show, -s, -S\033[0m       Display the build command used to build the image.\n"
+    printf "\033[0;34m config_path:\033[0m\n"
+    printf "  \033[0m Path to save the generated configuration files. (Optional).\n\n"
+
 
     # Handle user input or exit.
     if [[ -z "$input" ]]; then
@@ -777,7 +780,7 @@ select_build() {
     fi
 
     case "$dist" in
-    "Debian" | "Ubuntu Server" | "AlmaLinux OS" | "Rocky Linux" | "Oracle Linux" | "CentOS" | "Fedora Server")
+    "Debian" | "Ubuntu Server" | "AlmaLinux OS" | "Rocky Linux" | "Oracle Linux" | "CentOS Stream" | "Fedora Server")
         var_files=("vsphere_vars" "build_vars" "ansible_vars" "proxy_vars" "common_vars" "network_vars" "storage_vars" "BUILD_VARS")
         validate_linux_username "$config_path/build.pkrvars.hcl"
         printf "Starting the build of %s %s...\n\n" "$dist" "$version"

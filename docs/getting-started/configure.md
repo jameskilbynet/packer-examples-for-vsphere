@@ -132,17 +132,26 @@ the kickstart files to the Linux guest operating system during the build.
 common_data_source = "http"
 ```
 
-???+ tip "IPTables"
+???+ tip "Firewall"
 
     Packer includes a built-in HTTP server that is used to serve the kickstart files for Linux
     machine image builds.
 
-    If iptables is enabled on your Packer host, you will need to open `common_http_port_min` through
+    If a firewall is enabled on your Packer host, you will need to open `common_http_port_min` through
     `common_http_port_max` ports.
 
-    ```shell
-    iptables -A INPUT -p tcp --match multiport --dports 8000:8099 -j ACCEPT
-    ```
+    :fontawesome-brands-linux: **VMware Photon OS**
+
+       ```shell
+       iptables -A INPUT -p tcp --match multiport --dports 8000:8099 -j ACCEPT
+       ```
+
+    :fontawesome-brands-ubuntu: **Ubuntu**
+
+       ```shell
+       sudo ufw allow 8000:8099/tcp
+       sudo ufw reload
+       ```
 
 You can change the `common_data_source` from `http` to `disk` to build supported Linux machine
 images without the need to use Packer's HTTP server. This is useful for environments that may not be

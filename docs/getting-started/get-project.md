@@ -27,11 +27,19 @@ You can choose between two options to get the source code:
 === ":octicons-repo-clone-24: &nbsp; Clone the Repository"
 
       ```shell
-      TAG_NAME=$(curl -s https://api.github.com/repos/vmware-samples/packer-examples-for-vsphere/releases | jq  -r '.[0].tag_name')
+      TAG_NAME=$(curl -s https://api.github.com/repos/vmware-samples/packer-examples-for-vsphere/releases | jq -r '.[0].tag_name')
 
+      BRANCH_NAME="${TAG_NAME//\//-}"
+      
       git clone https://github.com/vmware-samples/packer-examples-for-vsphere.git
       cd packer-examples-for-vsphere
-      git switch -c $TAG_NAME $TAG_NAME
+      
+      if git switch -c "$BRANCH_NAME" "$TAG_NAME"; then
+            echo "Switched to new branch: $BRANCH_NAME"
+      else
+            echo "Failed to switch to branch: $BRANCH_NAME"
+            exit 1
+      fi
       ```
 
 ???+ tip "Prerelease Updates"
