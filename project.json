@@ -1,11 +1,11 @@
 {
     "project": {
         "name": "Packer Examples for vSphere",
-        "version": "v0.22.1",
+        "version": "v0.23.0-dev",
         "description": "This project provides a collection of opinionated examples that demonstrate how you can use both\nHashiCorp Packer and the Packer Plugin for VMware vSphere (vsphere-iso builder) to automate the\ncreation of virtual machine images for VMware vSphere environments.\n\nWhether you're a developer, systems administrator, or site reliability engineer, this project is\ndesigned to both help and inspire you in streamlining your infrastructure provisioning process and\nmaintain consistency in your virtualization workflow.",
         "urls": {
-            "github": "https://github.com/vmware-samples/packer-examples-for-vsphere",
-            "documentation": "https://vmware-samples.github.io/packer-examples-for-vsphere"
+            "github": "https://github.com/vmware/packer-examples-for-vsphere",
+            "documentation": "https://vmware.github.io/packer-examples-for-vsphere"
         },
         "publisher": {
             "name": "VMware by Broadcom",
@@ -39,7 +39,7 @@
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.9.0-amd64-netinst.iso",
+                                        "download_link": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.10.0-amd64-netinst.iso",
                                         "checksum_algorithm": "sha256",
                                         "checksum": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA256SUMS"
                                     }
@@ -100,9 +100,9 @@
                                 "architectures": [
                                     {
                                         "architecture": "amd64",
-                                        "download_link": "https://releases.ubuntu.com/releases/24.04.1/ubuntu-24.04.1-live-server-amd64.iso",
+                                        "download_link": "https://releases.ubuntu.com/releases/24.04.2/ubuntu-24.04.2-live-server-amd64.iso",
                                         "checksum_algorithm": "sha256",
-                                        "checksum": "https://releases.ubuntu.com/releases/24.04.1/SHA256SUMS"
+                                        "checksum": "https://releases.ubuntu.com/releases/24.04/SHA256SUMS"
                                     }
                                 ],
                                 "build_files": [
@@ -128,31 +128,6 @@
                                         "download_link": "https://releases.ubuntu.com/releases/22.04/ubuntu-22.04.5-live-server-amd64.iso",
                                         "checksum_algorithm": "sha256",
                                         "checksum": "https://releases.ubuntu.com/releases/22.04/SHA256SUMS"
-                                    }
-                                ],
-                                "build_files": [
-                                    {
-                                        "vsphere": "vsphere.pkrvars.hcl",
-                                        "build": "build.pkrvars.hcl",
-                                        "ansible": "ansible.pkrvars.hcl",
-                                        "proxy": "proxy.pkrvars.hcl",
-                                        "common": "common.pkrvars.hcl",
-                                        "network": "network.pkrvars.hcl",
-                                        "storage": "linux-storage.pkrvars.hcl"
-                                    }
-                                ]
-                            }
-                        ],
-                        "20.04": [
-                            {
-                                "version": "20-04-LTS",
-                                "enabled": "true",
-                                "architectures": [
-                                    {
-                                        "architecture": "amd64",
-                                        "download_link": "https://releases.ubuntu.com/releases/20.04.6/ubuntu-20.04.6-live-server-amd64.iso",
-                                        "checksum_algorithm": "sha256",
-                                        "checksum": "https://releases.ubuntu.com/releases/20.04.6/SHA256SUMS"
                                     }
                                 ],
                                 "build_files": [
