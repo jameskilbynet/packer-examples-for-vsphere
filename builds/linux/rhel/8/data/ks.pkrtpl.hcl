@@ -68,7 +68,8 @@ skipx
 
 ### Post-installation commands.
 %post
-/usr/sbin/subscription-manager register --username ${rhsm_username} --password ${rhsm_password} --autosubscribe --force
+# Register using activation key and organization
+/usr/sbin/subscription-manager register --activationkey=${rhsm_activation_key} --org=${rhsm_organization} --force
 /usr/sbin/subscription-manager repos --enable "codeready-builder-for-rhel-8-x86_64-rpms"
 dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 dnf makecache
