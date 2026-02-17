@@ -2,8 +2,8 @@
 # The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-2-Clause
 
-# Debian 12
-# https://www.debian.org/releases/bookworm/amd64/
+# Debian 13
+# https://www.debian.org/releases/trixie/amd64/
 
 # Locale and Keyboard
 d-i debian-installer/locale string ${vm_guest_os_language}

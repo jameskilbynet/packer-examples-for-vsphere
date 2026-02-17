@@ -4,7 +4,7 @@
 
 /*
     DESCRIPTION:
-    Fedora Server 41 storage variables.
+    Debian 13 storage variables.
     Packer Plugin for VMware vSphere: 'vsphere-iso' builder.
 */
 

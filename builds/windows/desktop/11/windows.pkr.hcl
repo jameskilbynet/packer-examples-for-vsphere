@@ -20,11 +20,11 @@ packer {
     }
     git = {
       source  = "github.com/ethanmdavidson/git"
-      version = ">= 0.6.3"
+      version = ">= 0.6.5"
     }
     ansible = {
       source  = "github.com/hashicorp/ansible"
-      version = ">= 1.1.2"
+      version = ">= 1.1.4"
     }
   }
 }
@@ -150,8 +150,9 @@ source "vsphere-iso" "windows-desktop-pro" {
   dynamic "export" {
     for_each = var.common_ovf_export_enabled ? [1] : []
     content {
-      name  = local.vm_name_pro
-      force = var.common_ovf_export_overwrite
+      name        = local.vm_name_pro
+      force       = var.common_ovf_export_overwrite
+      image_files = var.common_ovf_export_image_files
       options = [
         "extraconfig"
       ]
@@ -250,8 +251,9 @@ source "vsphere-iso" "windows-desktop-ent" {
   dynamic "export" {
     for_each = var.common_ovf_export_enabled ? [1] : []
     content {
-      name  = local.vm_name_ent
-      force = var.common_ovf_export_overwrite
+      name        = local.vm_name_ent
+      force       = var.common_ovf_export_overwrite
+      image_files = var.common_ovf_export_image_files
       options = [
         "extraconfig"
       ]

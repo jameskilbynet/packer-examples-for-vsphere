@@ -27,7 +27,8 @@ This project supports the following guest operating systems:
 |:-----------------------------|:----------|
 | VMware Photon OS             | 5         |
 |                              | 4         |
-| Debian                       | 12        |
+| Debian                       | 13        |
+|                              | 12        |
 |                              | 11        |
 | Ubuntu Server                | 24.04 LTS |
 |                              | 22.04 LTS |
@@ -41,7 +42,7 @@ This project supports the following guest operating systems:
 |                              | 8         |
 | CentOS Stream                | 10        |
 |                              | 9         |
-| Fedora Server                | 41        |
+| Fedora Server                | 43        |
 | SUSE Linux Enterprise Server | 15        |
 
 ## Microsoft Windows
@@ -52,7 +53,6 @@ This project supports the following guest operating systems:
 |                          | 2022    | Standard and Datacenter     | Core and Desktop |
 |                          | 2019    | Standard and Datacenter     | Core and Desktop |
 | Microsoft Windows        | 11      | Professional and Enterprise | -                |
-|                          | 10      | Professional and Enterprise | -                |
 
 ## Documentation
 
@@ -66,7 +66,7 @@ For more detailed information, refer to the [contribution guidelines][contributi
 
 ## Support
 
-This project is **not supported** by VMware Support Services.
+This project is **not supported** by Broadcom Support.
 
 We welcome you to use the GitHub [issues][gh-issues] tracker to report bugs or suggest features and enhancements.
 

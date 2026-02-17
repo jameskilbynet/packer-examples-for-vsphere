@@ -86,7 +86,7 @@ variable "vsphere_set_host_for_datastore_uploads" {
 
 variable "vm_guest_os_language" {
   type        = string
-  description = "The guest operating system lanugage."
+  description = "The guest operating system language."
   default     = "en_US"
 }
 
@@ -267,6 +267,12 @@ variable "common_ovf_export_enabled" {
 variable "common_ovf_export_overwrite" {
   type        = bool
   description = "Overwrite existing OVF artifact."
+  default     = true
+}
+
+variable "common_ovf_export_image_files" {
+  type        = bool
+  description = "Export image files in the OVF artifact."
   default     = true
 }
 

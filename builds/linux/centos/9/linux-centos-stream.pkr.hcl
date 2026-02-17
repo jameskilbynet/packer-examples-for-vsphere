@@ -15,15 +15,15 @@ packer {
   required_plugins {
     vsphere = {
       source  = "github.com/hashicorp/vsphere"
-      version = ">= 1.4.2"
+      version = ">= 2.0.0"
     }
     ansible = {
       source  = "github.com/hashicorp/ansible"
-      version = ">= 1.1.2"
+      version = ">= 1.1.4"
     }
     git = {
       source  = "github.com/ethanmdavidson/git"
-      version = ">= 0.6.3"
+      version = ">= 0.6.5"
     }
   }
 }
@@ -182,8 +182,9 @@ source "vsphere-iso" "linux-centos-stream" {
   dynamic "export" {
     for_each = var.common_ovf_export_enabled ? [1] : []
     content {
-      name  = local.vm_name
-      force = var.common_ovf_export_overwrite
+      name        = local.vm_name
+      force       = var.common_ovf_export_overwrite
+      image_files = var.common_ovf_export_image_files
       options = [
         "extraconfig"
       ]

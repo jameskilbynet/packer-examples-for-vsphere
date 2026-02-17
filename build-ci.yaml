@@ -19,6 +19,12 @@ menu:
           path: "builds/linux/photon/4/"
           var_files:
             - "network.pkrvars.hcl"
+      - entry: "Debian 13"
+        build:
+          path: "builds/linux/debian/13/"
+          var_files:
+            - "network.pkrvars.hcl"
+            - "linux-storage.pkrvars.hcl"
       - entry: "Debian 12"
         build:
           path: "builds/linux/debian/12/"
@@ -112,9 +118,9 @@ menu:
           var_files:
             - "network.pkrvars.hcl"
             - "linux-storage.pkrvars.hcl"
-      - entry: "Fedora Server 41"
+      - entry: "Fedora Server 43"
         build:
-          path: "builds/linux/fedora/41/"
+          path: "builds/linux/fedora/43/"
           var_files:
             - "network.pkrvars.hcl"
             - "linux-storage.pkrvars.hcl"
@@ -199,19 +205,5 @@ menu:
       - entry: "Windows 11 - Professional Only"
         build:
           path: "builds/windows/desktop/11/"
-          only:
-            - vsphere-iso.windows-desktop-pro
-      - entry: "Windows 10 - All"
-        message: "all Windows 10 Templates"
-        build:
-          path: "builds/windows/desktop/10/"
-      - entry: "Windows 10 - Enterprise Only"
-        build:
-          path: "builds/windows/desktop/10/"
-          only:
-            - vsphere-iso.windows-desktop-ent
-      - entry: "Windows 10 - Professional Only"
-        build:
-          path: "builds/windows/desktop/10/"
           only:
             - vsphere-iso.windows-desktop-pro

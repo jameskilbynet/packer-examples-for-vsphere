@@ -58,6 +58,15 @@ VMware-Photon-OS-4:
 
 ##############################################################################
 
+Debian-13:
+    extends: .packer-build
+    variables:
+        INPUT_PATH: "$SCRIPT_PATH/builds/linux/debian/13/"
+        BUILD_VARS: "linux-debian-13.pkrvars.hcl"
+        EXTRA_VAR_FILES: "-var-file=$CONFIG_PATH/network.pkrvars.hcl -var-file=$CONFIG_PATH/linux-storage.pkrvars.hcl"
+
+##############################################################################
+
 Debian-12:
     extends: .packer-build
     variables:
@@ -193,11 +202,11 @@ CentOS-Stream-9:
 
 ##############################################################################
 
-Fedora-Server-41:
+Fedora-Server-43:
     extends: .packer-build
     variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/linux/fedora/41/"
-        BUILD_VARS: "linux-fedora-41.pkrvars.hcl"
+        INPUT_PATH: "$SCRIPT_PATH/builds/linux/fedora/43/"
+        BUILD_VARS: "linux-fedora-43.pkrvars.hcl"
         EXTRA_VAR_FILES: "-var-file=$CONFIG_PATH/network.pkrvars.hcl -var-file=$CONFIG_PATH/linux-storage.pkrvars.hcl"
 
 ##############################################################################
@@ -311,32 +320,6 @@ Windows-11-Professional-Only:
     variables:
         INPUT_PATH: "$SCRIPT_PATH/builds/windows/desktop/11/"
         BUILD_VARS: "windows-desktop-11.pkrvars.hcl"
-        BUILD_ONLY: "--only vsphere-iso.windows-desktop-pro"
-
-##############################################################################
-
-Windows-10-All:
-    extends: .packer-build
-    variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/windows/desktop/10/"
-        BUILD_VARS: "windows-desktop-10.pkrvars.hcl"
-
-##############################################################################
-
-Windows-10-Enterprise-Only:
-    extends: .packer-build
-    variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/windows/desktop/10/"
-        BUILD_VARS: "windows-desktop-10.pkrvars.hcl"
-        BUILD_ONLY: "--only vsphere-iso.windows-desktop-ent"
-
-##############################################################################
-
-Windows-10-Professional-Only:
-    extends: .packer-build
-    variables:
-        INPUT_PATH: "$SCRIPT_PATH/builds/windows/desktop/10/"
-        BUILD_VARS: "windows-desktop-10.pkrvars.hcl"
         BUILD_ONLY: "--only vsphere-iso.windows-desktop-pro"
 
 ##############################################################################
